@@ -2,6 +2,7 @@ package;
 
 import flixel.FlxG;
 import flixel.FlxObject;
+import flixel.FlxSprite;
 import flixel.FlxSubState;
 import flixel.math.FlxMath;
 import flixel.math.FlxPoint;
@@ -13,6 +14,7 @@ import flixel.tweens.FlxTween;
 class GameOverSubstate extends MusicBeatSubstate
 {
 	public var boyfriend:Boyfriend;
+	var loseSprite:FlxSprite;
 	var camFollow:FlxPoint;
 	var camFollowPos:FlxObject;
 	var updateCamera:Bool = false;
@@ -40,6 +42,20 @@ class GameOverSubstate extends MusicBeatSubstate
 		PlayState.instance.callOnLuas('onGameOverStart', []);
 
 		super.create();
+
+		//yippee lateral my beloved
+		//ill add this later :awkward:
+		/*
+		loseSprite = new FlxSprite(0, 240).loadGraphic(Paths.image('lose'));//lose sprite?!!?!
+		loseSprite.screenCenter(X);
+		loseSprite.frames = Paths.getSparrowAtlas('lose');//xml
+		loseSprite.animation.addByPrefix('guh', 'lose', 12, false);//anim
+		loseSprite.animation.play('guh');//i forgor
+		loseSprite.scrollFactor.set();
+		loseSprite.scale.set(0.6, 0.6);
+		loseSprite.antialiasing = ClientPrefs.globalAntialiasing;
+		add(loseSprite);
+		*/
 	}
 
 	public function new(x:Float, y:Float, camX:Float, camY:Float)

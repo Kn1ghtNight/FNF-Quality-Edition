@@ -1088,9 +1088,9 @@ class PlayState extends MusicBeatState
 		timeBarBG.sprTracker = timeBar;
 
 		// le wiggle
-		wiggleShit.waveAmplitude = 0; //because the beat shit will handle amplitude bc i wanna do some funky settle shit if i know how :thumbs:
+		wiggleShit.waveAmplitude = 0.025;
 		wiggleShit.effectType = WiggleEffectType.DREAMY;
-		wiggleShit.waveFrequency = 0;
+		wiggleShit.waveFrequency = 6;
 		wiggleShit.waveSpeed = 1.8; // fasto
 		wiggleShit.shader.uTime.value = [(strumLine.y - Note.swagWidth * 4) / FlxG.height]; // from 4mbr0s3 2
 		susWiggle = new ShaderFilter(wiggleShit.shader);
@@ -5057,9 +5057,6 @@ class PlayState extends MusicBeatState
 	override function beatHit()
 	{
 		super.beatHit();
-
-		wiggleShit.waveAmplitude = 0.025;
-		wiggleShit.waveFrequency = 5.5;
 
 		if(lastBeatHit >= curBeat) {
 			//trace('BEAT HIT: ' + curBeat + ', LAST HIT: ' + lastBeatHit);
