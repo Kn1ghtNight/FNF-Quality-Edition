@@ -1094,6 +1094,7 @@ class PlayState extends MusicBeatState
 		wiggleShit.waveSpeed = 1.8; // fasto
 		wiggleShit.shader.uTime.value = [(strumLine.y - Note.swagWidth * 4) / FlxG.height]; // from 4mbr0s3 2
 		susWiggle = new ShaderFilter(wiggleShit.shader);
+		//coo;
 		
 		if(ClientPrefs.wiggleNote)
 		filterSUSnotes.push(susWiggle); // only enable it for snake notes
